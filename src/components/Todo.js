@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo, deleteTodo } from '../actions/index'
+import { addTodo, deleteTodo, removeTodo } from '../actions/index'
 
 
 
@@ -67,6 +67,7 @@ function Todo() {
                         })
                     }
                 </div>
+                <button onClick={()=> dispatch(removeTodo())} > remove all </button>
             </div>
 
         </>
